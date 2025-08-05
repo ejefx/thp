@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Hope Project</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <img
+          src="{{ url_for('static', filename='thp-images/logo.png') }}"
+          alt="The Hope Project Logo"
+        />
+      </div>
+      <div class="menu-toggle" id="menuToggle">☰</div>
+      <nav>
+        <ul id="navList">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#impact">Impact</a></li>
+          <li><a href="#donate">Donate</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Welcome to The Hope Project</h1>
+      <p>Empowering lives, building lifelong hope.</p>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <h2>Love. Legacy. Real Impact.</h2>
+      <p>
+        The Hope Foundation was born from hearts that never stop giving. People
+        like you—who nurture, protect, and keep showing up—are the soul of our
+        mission.
+      </p>
+      <p>
+        We care for children, support elders, and restore dignity where the
+        world has forgotten it.
+      </p>
+      <p>
+        Every donation, every act of love, becomes legacy. Because kindness
+        isn’t small—it echoes through generations.
+      </p>
+      <p><strong>Join us. Let’s keep the light going.</strong></p>
+    </section>
+
+    <!-- Impact -->
+    <section class="impact" id="impact">
+      <h2>Your Impact</h2>
+      <p class="impact-intro">
+        Hope is a child who smiles after days of crying. But without action,
+        that smile never comes.
+        <strong>Every 4 seconds, another child slips into hunger.</strong>
+      </p>
+      <p>
+        These numbers aren’t just statistics, they are children. Every figure
+        represents a life waiting for someone to intervene. Support nutrition
+        programs, healthcare access, and orphan care now. Their survival depends
+        on it.
+      </p>
+
+      <div class="hunger-counter">
+        <h3 id="hungerCount">0</h3>
+        <p>
+          Children pushed into hunger <br />
+          while you've been here
+        </p>
+      </div>
+
+      <div class="stats">
+        <div class="stat-box">
+          <h3>1</h3>
+          <p>An empty plate today can mean 1 grave tomorrow</p>
+        </div>
+        <div class="stat-box">
+          <h3>500,000</h3>
+          <p>
+            This is the number of young lives lost annually. A child under 5
+            dies every minute from malaria.
+          </p>
+        </div>
+        <div class="stat-box">
+          <h3>140 million</h3>
+          <p>This is the estimated figure children worldwide who are orphans</p>
+        </div>
+      </div>
+
+      <p class="impact-cta">
+        <strong>Ignore this, and more children go hungry, unseen.</strong><br />
+        Act now. Let your love leave a mark they’ll never forget.
+      </p>
+    </section>
+
+    <!-- BEFORE & AFTER SLIDER SECTION -->
+    <section class="impact-video section">
+      <h2>A Child’s Reality — See the Pain</h2>
+      <p class="impact-intro">
+        This is not a scene from a movie — it's real life for thousands of
+        children.<br />
+        Watch, feel, and ask yourself: <strong>Will I act or ignore?</strong>
+      </p>
+
+      <div class="video-wrapper">
+        <video controls poster="thp-images/child2.jpg">
+          <source
+            src="{{ url_for('static', filename='thp-videos/child1.mp4') }}"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <a href="#donate" class="btn">Be The Reason They Eat</a>
+    </section>
+
+    <!-- Board Bios -->
+    <section class="board" id="board">
+      <h2>Meet Our Board</h2>
+      <div class="board-top">
+        <div class="member">
+          <img
+            src="{{ url_for('static', filename='thp-images/amina.png') }}"
+            alt="Amina Diallo"
+          />
+          <h3>Amina Diallo</h3>
+          <p>Educational Director</p>
+        </div>
+      </div>
+      <div class="board-branch">
+        <div class="member">
+          <img
+            src="{{ url_for('static', filename='thp-images/Dr.kwame.png') }}"
+            alt="Dr. Kwame Mensah"
+          />
+          <h3>Dr. Kwame Mensah</h3>
+          <p>Medical Director</p>
+        </div>
+        <div class="member">
+          <img
+            src="{{ url_for('static', filename='thp-images/ross.png') }}"
+            alt="Natreaka Ross"
+          />
+          <h3>Natreaka Ross</h3>
+          <p>Public Relations Lead</p>
+        </div>
+        <div class="member">
+          <img
+            src="{{ url_for('static', filename='thp-images/revsib.png') }}"
+            alt="Rev. Sibusiso Ncube"
+          />
+          <h3>Rev. Sibusiso Ncube</h3>
+          <p>Spiritual Advisor</p>
+        </div>
+        <div class="member">
+          <img
+            src="{{ url_for('static', filename='thp-images/dj.jpg') }}"
+            alt="Dwayne Johnson"
+          />
+          <h3>Dwayne Johnson</h3>
+          <p>Global Awareness Ambassador</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ways to Help -->
+    <section class="help">
+      <h2>Ways to Help</h2>
+      <ul>
+        <li>Donate</li>
+        <li>Volunteer</li>
+        <li>Fundraise</li>
+        <li>Partner with Us</li>
+      </ul>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <h2>Success Stories</h2>
+      <div class="testimonial-slider">
+        <div class="testimonial active">
+          <img
+            src="{{ url_for('static', filename='thp-images/grp1.jpg') }}"
+            alt="Birthday Party"
+          />
+          <p>
+            Smiles, laughter, and cake! Honoring the special days of our amazing
+            kids at the charity birthday party
+          </p>
+          <span>— The Children's Birthday Bash, South Africa</span>
+        </div>
+        <div class="testimonial">
+          <img
+            src="{{ url_for('static', filename='thp-images/grp2.jpg') }}"
+            alt="Appreciation Dinner"
+          />
+          <p>
+            Celebrating generosity and shared vision at our donor and board
+            member appreciation dinner
+          </p>
+          <span>— Annual Appreciation Dinner, South Africa</span>
+        </div>
+        <div class="testimonial">
+          <img
+            src="{{ url_for('static', filename='thp-images/ross2.jpeg') }}"
+            alt="UN General Assembly"
+          />
+          <p>
+            Executive Director - Margaret with The HOPE Project Board Member
+            Natreaka Ross in New York during the UN General Assembly 2024.
+          </p>
+          <span>— The UN General Assembly, New York</span>
+        </div>
+      </div>
+      <div class="slider-arrows">
+        <button class="arrow-btn" onclick="prevTestimonial()">‹</button>
+        <button class="arrow-btn" onclick="nextTestimonial()">›</button>
+      </div>
+    </section>
+
+    <!-- Donate -->
+    <section class="donate" id="donate">
+      <h2>Donate to The Hope Project</h2>
+      <p>
+        Your support changes lives. Click below to start a donation
+        conversation:
+      </p>
+      <a
+        href="mailto:thehopeproject2000@gmail.com?subject=Donation%20to%20The%20Hope%20Project&body=Hello,%20I%20would%20like%20to%20make%20a%20donation.%20Please%20guide%20me."
+        class="btn"
+        >Contact to Donate</a
+      >
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+      <p>&copy; 2025 The Hope Project. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      const toggle = document.getElementById("menuToggle");
+      const navList = document.getElementById("navList");
+      toggle.addEventListener("click", () => navList.classList.toggle("show"));
+
+      let current = 0;
+      const testimonials = document.querySelectorAll(".testimonial");
+
+      function showTestimonial(index) {
+        testimonials.forEach((t, i) => {
+          t.classList.toggle("active", i === index);
+        });
+      }
+
+      function nextTestimonial() {
+        current = (current + 1) % testimonials.length;
+        showTestimonial(current);
+      }
+
+      function prevTestimonial() {
+        current = (current - 1 + testimonials.length) % testimonials.length;
+        showTestimonial(current);
+      }
+
+      showTestimonial(current);
+      setInterval(nextTestimonial, 10000);
+
+      let hungerCount = 0;
+      const hungerDisplay = document.getElementById("hungerCount");
+      setInterval(() => {
+        hungerCount++;
+        hungerDisplay.textContent = hungerCount;
+      }, 4000);
+
+      const container = document.getElementById("sliderContainer");
+      const beforeImage = document.getElementById("beforeImage");
+      const sliderBar = document.getElementById("sliderBar");
+
+      container.addEventListener("mousemove", (e) => {
+        const rect = container.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const percent = (x / rect.width) * 100;
+        beforeImage.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+        sliderBar.style.left = `${percent}%`;
+      });
+
+      container.addEventListener("touchmove", (e) => {
+        const rect = container.getBoundingClientRect();
+        const x = e.touches[0].clientX - rect.left;
+        const percent = (x / rect.width) * 100;
+        beforeImage.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+        sliderBar.style.left = `${percent}%`;
+      });
+    </script>
+  </body>
+</html>

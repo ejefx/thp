@@ -1,0 +1,219 @@
+/* =============================== THE HOPE PROJECT - COMPLETE CSS =============================== */
+
+:root { --terracotta: #E2725B; --sunrise-gold: #FFC857; --earth-brown: #6B4F3F; --olive-green: #8A9A5B; --clay-beige: #F5F3EE; --charcoal-black: #222222; }
+
+body { font-family: 'Poppins', sans-serif; color: var(--charcoal-black); background: var(--clay-beige); margin: 0; padding: 0; }
+
+h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 600; margin-bottom: 16px; }
+
+/* ===================== HEADER + NAVIGATION ===================== */
+
+header { background: var(--earth-brown); padding: 10px 32px; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--olive-green); box-shadow: 0 2px 8px rgba(34,34,34,0.05); position: sticky; top: 0; z-index: 1000; }
+
+.logo img { height: 80px; max-width: 180px; }
+
+nav ul { list-style: none; display: flex; gap: 24px; margin: 0; padding: 0; }
+
+nav a { color: var(--sunrise-gold); text-decoration: none; font-weight: bold; padding: 8px 16px; border-radius: 4px; transition: background 0.3s, color 0.3s; }
+
+nav a:hover { background: var(--terracotta); color: #fff; }
+
+.menu-toggle { display: none; font-size: 2.5rem; cursor: pointer; color: var(--sunrise-gold); position: absolute; top: 20px; right: 24px; z-index: 1001; }
+
+@media (max-width: 768px) { .menu-toggle { display: block; }
+
+nav ul { display: none; flex-direction: column; background: var(--earth-brown); width: 100%; padding: 16px; position: absolute; top: 80px; left: 0; z-index: 999; }
+
+nav ul.show { display: flex; } }
+
+/* ============ HERO ============ */
+
+.hero { background: url('thp-images/img1.jpg') center/cover no-repeat; text-align: center; padding: 100px 20px; color: #fff; position: relative; overflow: hidden; }
+
+.hero::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); z-index: 1; }
+
+.hero h1, .hero p, .hero .btn { position: relative; z-index: 2; }
+
+.hero h1 { font-size: 2.5em; color: #fff; }
+
+.hero p { font-size: 1.2em; color: #f5f5f5; }
+
+@media (max-width: 768px) { .hero { padding: 80px 20px; } .hero h1 { font-size: 2em; } }
+
+/* ============ SECTIONS ============ */
+
+section { padding: 40px 20px; max-width: 800px; margin: 0 auto; border-bottom: 2px solid var(--olive-green); margin-bottom: 24px; padding-bottom: 24px; }
+
+.about, .help, .testimonials, .impact-video { background: #fffde7; border-radius: 12px; box-shadow: 0 2px 8px rgba(34, 34, 34, 0.04); margin-bottom: 32px; }
+
+.about p { line-height: 1.7; font-size: 1.1em; margin-bottom: 16px; }
+
+.about p strong { color: var(--terracotta); }
+
+/* ============ IMPACT SECTION ============ */
+
+.impact { text-align: center; animation: fadeInUp 0.8s ease-in-out both; }
+
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+.impact-intro, .impact-cta { font-size: 1.1em; font-style: italic; margin-bottom: 24px; padding: 0 12px; }
+
+.hunger-counter { background: var(--terracotta); color: #fff; padding: 20px; border-radius: 12px; margin: 0 auto 32px auto; max-width: 280px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); transition: transform 0.3s; }
+
+.hunger-counter:hover { transform: scale(1.05); }
+
+.hunger-counter h3 { font-size: 2.4em; margin: 0; }
+
+.stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; margin-bottom: 24px; }
+
+.stat-box { background: #fff; padding: 20px; border-radius: 10px; min-width: 160px; max-width: 200px; box-shadow: 0 4px 10px rgba(0,0,0,0.07); transition: transform 0.3s, box-shadow 0.3s; }
+
+.stat-box:hover { transform: translateY(-6px); box-shadow: 0 8px 18px rgba(0,0,0,0.12); }
+
+.stat-box h3 { font-size: 1.8em; color: var(--terracotta); }
+
+.btn { display: inline-block; padding: 12px 36px; background: linear-gradient(to right, var(--terracotta), var(--sunrise-gold)); color: #fff; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+
+.btn:hover { transform: scale(1.05); box-shadow: 0 6px 18px rgba(0,0,0,0.2); }
+/* === BOARD BIOS SECTION === */
+.board {
+  padding: 60px 20px;
+  text-align: center;
+  width: 100%;
+  background: #fffde7;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  margin-bottom: 32px;
+}
+
+.board-top {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.board-branch {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.member {
+  width: 160px;
+  text-align: center;
+  margin: 16px;
+}
+
+.member img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 4px solid var(--sunrise-gold);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.member h3 {
+  margin-top: 12px;
+  font-size: 1.1em;
+  color: var(--terracotta);
+}
+
+.member p {
+  font-size: 0.95em;
+  color: var(--charcoal-black);
+}
+
+/* ============ VIDEO SECTION ============ */
+
+.impact-video { text-align: center; padding: 40px 20px; max-width: 900px; margin: 0 auto; }
+
+.video-wrapper { margin: 20px auto; width: 100%; max-width: 720px; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15); }
+
+.video-wrapper video { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 12px; }
+/* === Testimonials Section === */
+.testimonials {
+  background: #fffde7;
+  border-radius: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.testimonial-slider {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.testimonial {
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+  padding: 20px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.testimonial.active {
+  display: block;
+}
+
+.testimonial img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.testimonial p {
+  font-size: 1.1em;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.testimonial span {
+  font-weight: bold;
+  color: var(--terracotta);
+}
+
+.slider-arrows {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.arrow-btn {
+  background: var(--terracotta);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2em;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: background 0.3s ease;
+}
+
+.arrow-btn:hover {
+  background: var(--sunrise-gold);
+  color: var(--charcoal-black);
+}
+
+/* ============ FOOTER ============ */
+
+footer { background: var(--earth-brown); color: var(--sunrise-gold); text-align: center; padding: 20px 0; margin-top: 40px; }
+
+/* ============ RESPONSIVE FIXES ============ */
+
+@media (max-width: 768px) { .stats, .board-branch { flex-direction: column; align-items: center; } .stat-box, .hunger-counter { width: 90%; } .impact-video { padding: 20px 12px; } .video-wrapper { aspect-ratio: 16 / 9; width: 100%; } }
+
